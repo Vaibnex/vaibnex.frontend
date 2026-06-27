@@ -287,6 +287,8 @@ body{
     margin-bottom:15px;
 }
 
+
+
 /* INTERNSHIPS */
 
 .internships{
@@ -474,4 +476,167 @@ footer p{
 .hero-buttons{
     justify-content:center;
 }
+}
+
+/* Testimonials */
+
+.testimonials{
+    padding:100px 40px;
+}
+
+.testimonial-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.testimonial-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--border);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    transition:.35s ease;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(37,99,235,.25);
+}
+
+.testimonial-profile{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.testimonial-profile img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    border:3px solid var(--primary);
+}
+
+.testimonial-profile h3{
+    font-size:1.1rem;
+    margin-bottom:5px;
+    font-family:'Poppins',sans-serif;
+}
+
+.testimonial-profile span{
+    color:var(--muted);
+    font-size:.9rem;
+}
+
+.testimonial-card p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+/* FAQ */
+
+.faq{
+    padding:100px 40px;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-item{
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--border);
+    border-radius:18px;
+    margin-bottom:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.faq-item:hover{
+    border-color:var(--secondary);
+}
+
+.faq-question{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 28px;
+    cursor:pointer;
+}
+
+.faq-question h3{
+    font-size:1.05rem;
+    font-weight:600;
+}
+
+.faq-question span{
+    font-size:1.8rem;
+    color:var(--secondary);
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+    color:var(--muted);
+    line-height:1.8;
+    padding:0 28px 22px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:300px;
+    padding-top:10px;
+}
+.faq-item.active .faq-question span{
+    transform:rotate(45deg);
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.testimonials,
+.faq{
+    padding:80px 25px;
+}
+
+.testimonial-grid{
+    grid-template-columns:1fr;
+}
+
+.faq-question{
+    padding:20px;
+}
+
+.faq-answer p{
+    padding:0 20px 20px;
+}
+
+}
+
+/* Hover Effects */
+
+.service-card,
+.intern-card,
+.project-card,
+.tech-card,
+.stat-box {
+    transition: all 0.35s ease;
+}
+
+.service-card:hover,
+.intern-card:hover,
+.project-card:hover,
+.tech-card:hover,
+.stat-box:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(37,99,235,0.25);
 }
