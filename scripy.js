@@ -313,4 +313,65 @@ window.addEventListener("load", () => {
 
   }, 100);
 
+}); 
+/* FAQ */
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+
+        faqItems.forEach((faq) => {
+
+            if (faq !== item) {
+
+                faq.classList.remove("active");
+
+            }
+
+        });
+
+        item.classList.toggle("active");
+
+    });
+
 });
+
+
+/* Testimonials and FAQ Reveal */
+
+const extraReveal = document.querySelectorAll(
+    ".testimonial-card, .faq-item"
+);
+
+extraReveal.forEach((item) => {
+
+    item.style.opacity = "0";
+    item.style.transform = "translateY(40px)";
+    item.style.transition = "all .8s ease";
+
+});
+
+const revealExtra = () => {
+
+    extraReveal.forEach((item) => {
+
+        const top = item.getBoundingClientRect().top;
+
+        if (top < window.innerHeight - 100) {
+
+            item.style.opacity = "1";
+            item.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+};
+
+window.addEventListener("scroll", revealExtra);
+
+revealExtra();
