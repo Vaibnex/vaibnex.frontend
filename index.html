@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Basic meta tags for character encoding and mobile responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaibnex | Innovating The Future</title>
-    
-    <!-- External CSS file ko link kiya jaa rha hai -->
+
+    <!-- Link to external custom CSS file -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Google Fonts se Inter aur Poppins font style fetch kiya jaa rha hai -->
+
+    <!-- Pre-fetching and importing custom Google Fonts (Inter and Poppins) -->
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Navbar: Website ka sabse upar ka header jisme logo aur navigation links hain -->
+    <!-- =========================================================================
+         NAVBAR & HEADER SECTION
+         Contains the website logo, primary links, and a call-to-action button.
+         ========================================================================= -->
     <header class="header">
         <nav class="navbar">
-            <!-- Company Logo aur Name -->
+            <!-- Branding element: logo icon and brand name text -->
             <div class="logo">
                 <img src="logo (2).png" alt="Vaibnex Logo">
                 <span>VAIBNEX</span>
             </div>
-            <!-- Menu Links: click krne par page ke us section pr automatic scroll hoga -->
+
+            <!-- Main navigation menu links mapped to section ID anchors -->
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -31,34 +38,42 @@
                 <li><a href="#verify">Verify</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <!-- Top Right side ka Call-to-Action button -->
+
+            <!-- Primary application anchor button -->
             <a href="#" class="apply-btn">Apply Now</a>
         </nav>
     </header>
 
-    <!-- Hero Section: Website ka main welcome banner jisme headline aur floating image hai -->
+    <!-- =========================================================================
+         HERO SECTION
+         The prominent landing area containing core brand taglines and graphics.
+         ========================================================================= -->
     <section id="home" class="hero">
+        <!-- Left column: Text taglines, target container for dynamic typing text, and action buttons -->
         <div class="hero-content">
-            <!-- Main Title jisme 'Digital Reality' text gradient color mein chamkega -->
             <h1>Transforming Ideas Into <span>Digital Reality</span></h1>
-            <!-- Yeh h2 khali hai kyunki isme JavaScript se dynamic typing animation chalega -->
+            <!-- Dynamic placeholder to handle typed content via JavaScript later -->
             <h2 id="typing-text"></h2>
             <p>Empowering future innovators through technology, real-world projects and professional internship opportunities.</p>
-            <!-- Hero section ke do important buttons -->
             <div class="hero-buttons">
                 <a href="#" class="btn-primary">Apply Internship</a>
                 <a href="#services" class="btn-secondary">Explore Services</a>
             </div>
         </div>
-        <!-- Right side ki image jisme CSS se up-down moving animation lagaya hai -->
+
+        <!-- Right column: Floating illustrative graphic representing development/AI -->
         <div class="hero-image">
             <img src="images/hero.png" alt="Technology Illustration">
         </div>
     </section>
 
-    <!-- Tech Stack Section: Un technologies ki list jinpar company kaam karti hai -->
+    <!-- =========================================================================
+         TECH STACK SECTION
+         Showcases core technical competencies and software frameworks used.
+         ========================================================================= -->
     <section class="tech-stack">
         <h2>Technologies We Work With</h2>
+        <!-- Flexible grid layout block distributing tech items cleanly -->
         <div class="tech-grid">
             <div class="tech-card">HTML5</div>
             <div class="tech-card">CSS3</div>
@@ -71,7 +86,10 @@
         </div>
     </section>
 
-    <!-- About Section: Company ke baare mein choti si summary -->
+    <!-- =========================================================================
+         ABOUT VAIBNEX SECTION
+         High-level company background statement and vision summary.
+         ========================================================================= -->
     <section id="about" class="about">
         <div class="section-title">
             <h2>About Vaibnex</h2>
@@ -79,7 +97,10 @@
         <p>Vaibnex is a technology-driven company dedicated to innovation, software development, artificial intelligence, and industry-focused internship programs that help students gain practical experience and professional growth.</p>
     </section>
 
-    <!-- Services Section: Jo services provide ki jaati hain unke cards -->
+    <!-- =========================================================================
+         SERVICES SECTION
+         Grid structure breaking down core enterprise offerings and services.
+         ========================================================================= -->
     <section id="services" class="services">
         <div class="section-title">
             <h2>Our Services</h2>
@@ -104,7 +125,10 @@
         </div>
     </section>
 
-    <!-- Internship Section: Available internship domains ki list -->
+    <!-- =========================================================================
+         INTERNSHIP PROGRAMS SECTION
+         Displays current domain specific training models provided to students.
+         ========================================================================= -->
     <section id="internships" class="internships">
         <div class="section-title">
             <h2>Internship Programs</h2>
@@ -117,9 +141,12 @@
         </div>
     </section>
 
-    <!-- Statistics Section: Numbers show karne ke liye (JS se counters 0 se chalenge) -->
+    <!-- =========================================================================
+         STATISTICS METRICS SECTION
+         Counters displaying training data and platform achievements.
+         ========================================================================= -->
     <section class="stats">
-        <!-- data-target mein main number likha hai jo count-up animation ke kaam aayega -->
+        <!-- data-target values are structured for analytical reading by JS engine counters -->
         <div class="stat-box">
             <h2 class="counter" data-target="500">0</h2>
             <p>Students Trained</p>
@@ -134,7 +161,10 @@
         </div>
     </section>
 
-    <!-- Projects Section: Featured industrial projects ke details -->
+    <!-- =========================================================================
+         FEATURED PROJECTS SECTION
+         Highlights internal tools and user applications built by team members.
+         ========================================================================= -->
     <section id="projects" class="projects">
         <div class="section-title">
             <h2>Featured Projects</h2>
@@ -155,13 +185,16 @@
         </div>
     </section>
 
-    <!-- Testimonials Section: Purane interns ke feedback aur reviews -->
+    <!-- =========================================================================
+         TESTIMONIALS SECTION
+         Slider-ready block highlighting intern feedback using dynamic profile avatars.
+         ========================================================================= -->
     <section class="testimonials">
         <div class="section-title">
             <h2>What Our Interns Say</h2>
         </div>
         <div class="testimonial-grid">
-            <!-- UI-Avatars API ka use kiya hai dynamic user profile pictures generate karne ke liye -->
+            <!-- Testimonial Item 1 -->
             <div class="testimonial-card">
                 <div class="testimonial-profile">
                     <img src="https://ui-avatars.com" alt="Honey">
@@ -172,6 +205,8 @@
                 </div>
                 <p>Working at Vaibnex has been an incredible learning experience. Real-world projects, supportive mentors, and modern technologies helped me improve my frontend development skills.</p>
             </div>
+
+            <!-- Testimonial Item 2 -->
             <div class="testimonial-card">
                 <div class="testimonial-profile">
                     <img src="https://ui-avatars.com" alt="Ali">
@@ -180,48 +215,3 @@
                         <span>UI/UX Design Intern</span>
                     </div>
                 </div>
-                <p>Vaibnex provides a professional environment where interns work on practical projects and gain valuable industry experience.</p>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-profile">
-                    <img src="https://ui-avatars.com" alt="Sara">
-                    <div>
-                        <h3>Sara Ahmed</h3>
-                        <span>Web Development Intern</span>
-                    </div>
-                </div>
-                <p>The internship improved my technical knowledge and teamwork skills. It was a wonderful opportunity to learn and grow.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section: Frequently Asked Questions (Accordion Dropdown style) -->
-    <section class="faq">
-        <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-        </div>
-        <div class="faq-container">
-            <!-- FAQ Item 1 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Who can apply for Vaibnex internships?</h3>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Any student or fresh graduate looking to build real-world tech experience can apply.</p>
-                </div>
-            </div>
-            <!-- FAQ Item 2 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Are these internships remote?</h3>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, we offer flexible remote internship options tailored for students.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Verify Section: Certificate ID check karne ke liye verification portal -->
