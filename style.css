@@ -1,338 +1,969 @@
-/* ==========================================================================
-   1. EXTERNAL FONTS & GLOBAL VARIABLES
-   ========================================================================== */
+/* =========================
+   VAIBNEX PREMIUM THEME
+========================= */
 
-/* Importing professional typography options from Google Fonts */
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
 
-/* Defining global CSS design tokens for consistent branding and themes */
-:root {
-    --primary: #2563eb;
-    /* Vibrant blue used for primary actions and accents */
-    --secondary: #06b6d4;
-    /* Cyan used for secondary highlights and gradients */
-    --bg: #0b1120;
-    /* Deep dark blue base color for the website background */
-    --card: #111827;
-    /* Slightly lighter gray-blue shade for structural cards */
-    --text: #f8fafc;
-    /* Off-white color for high contrast text readability */
-    --muted: #94a3b8;
-    /* Cool gray tone for subtitles, descriptions, and hints */
-    --border: rgba(255, 255, 255, 0.08);
-    /* Semi-transparent white ring for clean borders */
+:root{
+    --primary:#2563eb;
+    --secondary:#06b6d4;
+    --bg:#0b1120;
+    --card:#111827;
+    --text:#f8fafc;
+    --muted:#94a3b8;
+    --border:rgba(255,255,255,0.08);
 }
 
-/* ==========================================================================
-   2. GLOBAL RESET & BASE STYLES
-   ========================================================================== */
-
-/* Universal reset to standardize margins, paddings, and sizing calculations across browsers */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    /* Enables elegant native smooth scrolling for anchor links */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-/* Base body configuration for core fonts, backgrounds, and layout boundaries */
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    overflow-x: hidden;
-    /* Safeguards against unexpected horizontal layout breaking or scrolling */
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
 }
 
-/* Customizing scrollbar width for a modern, minimalist web footprint */
-::-webkit-scrollbar {
-    width: 8px;
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:8px;
 }
 
-/* Custom design for the draggable scrollbar slider track piece */
-::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 20px;
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
 }
 
-/* ==========================================================================
-   3. NAVIGATION HEADER
-   ========================================================================== */
+/* HEADER */
 
-/* Main fixed navbar banner floating at the absolute top of the screen viewport */
-.header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    /* Keeps navbar sitting securely above all other content panels */
-    backdrop-filter: blur(20px);
-    /* Modern glassmorphism translucent blurry backdrop effect */
-    background: rgba(11, 17, 32, 0.85);
-    border-bottom: 1px solid var(--border);
+.header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    backdrop-filter:blur(20px);
+    background:rgba(11,17,32,0.85);
+    border-bottom:1px solid var(--border);
 }
 
-/* Flexbox wrapper aligning the logo, navigation links, and action buttons */
-.navbar {
-    max-width: 1300px;
-    margin: auto;
-    padding: 18px 30px;
-    display: flex;
-    justify-content: space-between;
-    /* Spreads layout options across left, center, and right sides */
-    align-items: center;
+.navbar{
+    max-width:1300px;
+    margin:auto;
+    padding:18px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-/* Container arranging the graphical image brand logo and identity text side-by-side */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-/* Constraining the physical scale dimensions of the branding logo asset */
-.logo img {
-    width: 45px;
+.logo img{
+    width:45px;
 }
 
-/* Stylizing the company textual branding typography details */
-.logo span {
-    font-size: 1.4rem;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
+.logo span{
+    font-size:1.4rem;
+    font-weight:700;
+    font-family:'Poppins',sans-serif;
 }
 
-/* Flexbox grouping for the main navigation anchor directory layout elements */
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 28px;
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:28px;
 }
 
-/* Core styling rules for individual text link nodes */
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: .3s;
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
 }
 
-/* Highlights the targeted navigation hyperlink text link with secondary cyan on cursor hover */
-.nav-links a:hover {
-    color: var(--secondary);
+.nav-links a:hover{
+    color:var(--secondary);
 }
 
-/* High-priority call-to-action application submission button */
-.apply-btn {
-    padding: 12px 24px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    border-radius: 50px;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    transition: .3s;
+.apply-btn{
+    padding:12px 24px;
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.3s;
 }
 
-/* Subtle upward floating hover response to communicate button interactive feedback clickability */
-.apply-btn:hover {
-    transform: translateY(-3px);
+.apply-btn:hover{
+    transform:translateY(-3px);
 }
 
-/* ==========================================================================
-   4. HERO SECTION
-   ========================================================================== */
+/* HERO */
 
-/* Main top entry screen arrangement with balanced layout proportions and content spacing */
-.hero {
-    min-height: 100vh;
-    /* Demands full viewport height space coverage on landing */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1300px;
-    margin: auto;
-    padding: 120px 40px;
-    gap: 50px;
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1300px;
+    margin:auto;
+    padding:120px 40px;
+    gap:50px;
 }
 
-/* Left-side descriptive content block stretching to fill layout context ratios proportionately */
-.hero-content {
-    flex: 1;
+.hero-content{
+    flex:1;
 }
 
-/* Grand master heading title styling with clean bold letter spacing proportions */
-.hero-content h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
-    line-height: 1.2;
+.hero-content h1{
+    font-family:'Poppins',sans-serif;
+    font-size:4rem;
+    line-height:1.2;
 }
 
-/* Applies a premium dual-color gradient clip effect on specific hero statement words */
-.hero-content h1 span {
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.hero-content h1 span{
+    background:linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-/* Target placeholder for the automated dynamic text typing engine animation script */
-#typing-text {
-    margin-top: 20px;
-    color: var(--secondary);
-    font-size: 1.8rem;
+#typing-text{
+    margin-top:20px;
+    color:var(--secondary);
+    font-size:1.8rem;
 }
 
-/* Sub-text paragraph description framing company statements below headings */
-.hero-content p {
-    margin-top: 20px;
-    color: var(--muted);
-    line-height: 1.8;
-    max-width: 600px;
+.hero-content p{
+    margin-top:20px;
+    color:var(--muted);
+    line-height:1.8;
+    max-width:600px;
 }
 
-/* Flex configuration organizing primary and secondary interaction action buttons together */
-.hero-buttons {
-    margin-top: 35px;
-    display: flex;
-    gap: 15px;
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
 }
 
-/* Solid background fill configuration styling for primary click target buttons */
-.btn-primary {
-    padding: 14px 28px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    border-radius: 50px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    /* Validates correct width, padding and margin alignment blocks */
+.btn-primary{
+    padding:14px 28px;
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
 }
 
-/* Outlined border style look tailored for secondary discovery buttons */
-.btn-secondary {
-    padding: 14px 28px;
-    border: 1px solid var(--primary);
-    border-radius: 50px;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
+.btn-secondary{
+    padding:14px 28px;
+    border:1px solid var(--primary);
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
 }
 
-/* Right-side artistic technology vector illustration layout constraints */
-.hero-image img {
-    width: 100%;
-    max-width: 550px;
-    animation: float 5s ease-in-out infinite;
-    /* Links continuous vertical idle floating motion animation loop */
+.hero-image img{
+    width:100%;
+    max-width:550px;
+    animation:float 5s ease-in-out infinite;
 }
 
-/* Keyframes rendering engine managing the looping floating motion vector coordinates */
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
     }
-
-    50% {
-        transform: translateY(-20px);
+    50%{
+        transform:translateY(-20px);
     }
 }
 
-/* ==========================================================================
-   5. REUSABLE COMPONENTS & TECH STACK
-   ========================================================================== */
+/* SECTION TITLE */
 
-/* Standardized configuration styling applied to general sectional titles across components */
-.section-title {
-    text-align: center;
-    margin-bottom: 60px;
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
 }
 
-/* Large sectional bold typography definition rules */
-.section-title h2 {
-    font-size: 2.5rem;
-    font-family: 'Poppins', sans-serif;
+.section-title h2{
+    font-size:2.5rem;
+    font-family:'Poppins';
 }
 
-/* Container wrapper housing framework tools and library components */
-.tech-stack {
-    padding: 100px 40px;
-    text-align: center;
+/* TECH STACK */
+
+.tech-stack{
+    padding:100px 40px;
+    text-align:center;
 }
 
-/* Auto-adapting layout engine adjusting items into grids automatically depending on browser size */
-.tech-grid {
-    max-width: 1200px;
-    margin: 50px auto 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
+.tech-grid{
+    max-width:1200px;
+    margin:50px auto 0;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
 }
 
-/* Individual framework badge tags sporting clean modern frosted glassmorphic designs */
-.tech-card {
-    padding: 25px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(15px);
-    border: 1px solid var(--border);
-    transition: .3s;
+.tech-card{
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(15px);
+    border:1px solid var(--border);
+    transition:.3s;
 }
 
-/* Projects card slightly higher with an illuminating blue outer shadow reflection on hover */
-.tech-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 30px rgba(37, 99, 235, .4);
+.tech-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(37,99,235,.4);
 }
 
-/* ==========================================================================
-   6. ABOUT COMPANY SECTION
-   ========================================================================== */
+/* ABOUT */
 
-/* Clean text container focusing purely on central summary narratives of company operations */
-.about {
-    padding: 100px 40px;
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
+.about{
+    padding:100px 40px;
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
 }
 
-/* Spacing and line-height optimization to assist reading comfort on the long summary paragraph */
-.about p {
-    color: var(--muted);
-    font-size: 1.1rem;
-    line-height: 2;
+.about p{
+    color:var(--muted);
+    font-size:1.1rem;
+    line-height:2;
 }
 
-/* ==========================================================================
-   7. SERVICES SECTION
-   ========================================================================== */
+/* SERVICES */
 
-/* Outer wrapper panel block for organizational services sections */
-.services {
-    padding: 100px 40px;
+.services{
+    padding:100px 40px;
 }
 
-/* Balanced layout structuring services features into rows and columns */
-.service-grid {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+.service-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-/* Individual structural container designs highlighting professional core company skills panels */
-.service-card {
-    padding: 35px;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
-    border: 1px solid var(--border);
-    transition: .4s;
+.service-card{
+    padding:35px;
+    border-radius:24px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid var(--border);
+    transition:.4s;
 }
 
-/* Lifts cards up and projects a neon cyan colored outer glow effect on cursor entry hover */
-.service-card:hover {
-    transform: translateY(-10px);
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 40px rgba(6,182,212,.3);
+}
+
+.service-card h3{
+    margin-bottom:15px;
+}
+
+
+
+/* INTERNSHIPS */
+
+.internships{
+    padding:100px 40px;
+}
+
+.internship-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.intern-card{
+    padding:40px;
+    text-align:center;
+    border-radius:20px;
+    background:var(--card);
+    border:1px solid var(--border);
+    transition:.3s;
+}
+
+.intern-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--secondary);
+}
+
+/* STATS */
+
+.stats{
+    padding:100px 40px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.stat-box{
+    width:250px;
+    text-align:center;
+    padding:40px;
+    border-radius:20px;
+    background:var(--card);
+}
+
+.stat-box h2{
+    font-size:3rem;
+    color:var(--secondary);
+}
+
+/* PROJECTS */
+
+.projects{
+    padding:100px 40px;
+}
+
+.project-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    padding:35px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--border);
+}
+
+/* VERIFY */
+
+.verify{
+    padding:100px 40px;
+    text-align:center;
+}
+
+.verify-form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    gap:15px;
+}
+
+.verify-form input{
+    flex:1;
+    padding:16px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+}
+
+.verify-form button{
+    padding:16px 25px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    color:white;
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
+}
+
+/* CONTACT */
+
+.contact{
+    padding:100px 40px;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:18px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:var(--card);
+    color:white;
+}
+
+.contact-form button{
+    padding:16px;
+    border:none;
+    border-radius:15px;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
+}
+
+/* FOOTER */
+
+footer{
+    padding:50px 20px;
+    text-align:center;
+    border-top:1px solid var(--border);
+}
+
+footer h2{
+    margin-bottom:15px;
+    font-family:'Poppins';
+}
+
+footer p{
+    color:var(--muted);
+    margin-top:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:2.8rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+.verify-form{
+    flex-direction:column;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+}
+
+/* Testimonials */
+
+.testimonials{
+    padding:100px 40px;
+}
+
+.testimonial-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.testimonial-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--border);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    transition:.35s ease;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(37,99,235,.25);
+}
+
+.testimonial-profile{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.testimonial-profile img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    border:3px solid var(--primary);
+}
+
+.testimonial-profile h3{
+    font-size:1.1rem;
+    margin-bottom:5px;
+    font-family:'Poppins',sans-serif;
+}
+
+.testimonial-profile span{
+    color:var(--muted);
+    font-size:.9rem;
+}
+
+.testimonial-card p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+/* FAQ */
+
+/* ==========================================================
+   PREMIUM AI FAQ CARDS (MODERN CHAT STYLE)
+========================================================== */
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+/* CARD */
+.faq-card{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 24px;
+    border-radius:18px;
+
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    cursor:pointer;
+    transition:0.35s ease;
+
+    overflow:hidden;
+}
+
+/* BLUE GLOW BORDER ANIMATION */
+.faq-card::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:18px;
+    padding:2px;
+    background:linear-gradient(135deg,#2563eb,#06b6d4,#3b82f6);
+    opacity:0;
+    transition:0.4s ease;
+
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite:exclude;
+}
+
+/* LIGHT SWEEP EFFECT */
+.faq-card::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:120%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.08),
+        transparent
+    );
+    transition:0.7s;
+}
+
+/* HOVER */
+.faq-card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:
+        0 15px 40px rgba(37,99,235,0.25),
+        0 0 25px rgba(6,182,212,0.15);
+}
+
+.faq-card:hover::before{
+    opacity:1;
+}
+
+.faq-card:hover::after{
+    left:120%;
+}
+
+/* TEXT */
+.faq-card h3{
+    margin:0;
+    font-size:1.05rem;
+    color:#e2e8f0;
+    font-weight:600;
+    font-family:"Poppins",sans-serif;
+}
+
+/* SUBTEXT */
+.faq-card small{
+    display:block;
+    margin-top:5px;
+    font-size:0.8rem;
+    color:#94a3b8;
+}
+
+/* ARROW BUTTON */
+.faq-card span{
+    width:42px;
+    height:42px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+    font-size:18px;
+    color:#fff;
+
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+    transition:0.3s ease;
+    box-shadow:0 0 15px rgba(37,99,235,0.4);
+}
+
+.faq-card:hover span{
+    transform:rotate(90deg) scale(1.1);
+}
+
+/* ACTIVE CLICK EFFECT */
+.faq-card:active{
+    transform:scale(0.98);
+}/* ==========================================================
+   VAIBNEX AI CHATBOT FAQ
+========================================================== */
+/* ==========================================================
+   VAIBNEX AI CHATBOT (PART 1)
+   Glassmorphism Chat Popup Base UI
+========================================================== */
+
+.chatbot-popup{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(12px);
+    opacity:0;
+    visibility:hidden;
+    transition:0.35s ease;
+    z-index:99999;
+}
+
+.chatbot-popup.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.chatbot-window{
+    width:min(750px,92%);
+    height:520px;
+    background:rgba(15,23,42,0.95);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:22px;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    transform:translateY(40px) scale(0.9);
+    transition:0.4s ease;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.chatbot-popup.show .chatbot-window{
+    transform:translateY(0) scale(1);
+}
+
+/* HEADER */
+
+.chat-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 22px;
+    background:linear-gradient(90deg,#111827,#0f172a);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.chat-profile{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.ai-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    box-shadow:0 0 20px rgba(37,99,235,0.4);
+}
+
+.chat-header h3{
+    margin:0;
+    font-size:1rem;
+    color:#fff;
+    font-family:"Poppins",sans-serif;
+}
+
+.status{
+    font-size:0.8rem;
+    color:#22c55e;
+}
+
+#closeChat{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:#ef4444;
+    color:#fff;
+    font-size:18px;
+    transition:0.3s;
+}
+
+#closeChat:hover{
+    transform:rotate(180deg);
+}
+
+/* CHAT BODY */
+
+.chat-body{
+    flex:1;
+    padding:20px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+/* USER MESSAGE */
+
+.user-message{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.user-message .message-box{
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    padding:14px 16px;
+    border-radius:14px 14px 0 14px;
+    color:#fff;
+    max-width:70%;
+    font-size:0.95rem;
+}
+
+/* AI MESSAGE */
+
+.ai-message{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.ai-icon{
+    font-size:22px;
+}
+
+.ai-message .message-box{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:14px 16px;
+    border-radius:14px 14px 14px 0;
+    max-width:75%;
+    color:#e2e8f0;
+}
+
+/* THINKING ANIMATION */
+
+.thinking{
+    display:flex;
+    gap:5px;
+    margin-bottom:8px;
+}
+
+.thinking span{
+    width:8px;
+    height:8px;
+    background:#06b6d4;
+    border-radius:50%;
+    animation:bounce 1s infinite ease-in-out;
+}
+
+.thinking span:nth-child(2){
+    animation-delay:0.2s;
+}
+
+.thinking span:nth-child(3){
+    animation-delay:0.4s;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+}
+/* ==========================================================
+   VAIBNEX AI CHATBOT (PART 2)
+   Messages + Effects + Responsive + Final Polish
+========================================================== */
+
+/* SCROLLBAR (CHAT AREA) */
+
+.chat-body::-webkit-scrollbar{
+    width:6px;
+}
+
+.chat-body::-webkit-scrollbar-thumb{
+    background:linear-gradient(#2563eb,#06b6d4);
+    border-radius:20px;
+}
+
+/* MESSAGE ANIMATION */
+
+.message{
+    animation:fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* TEXT INSIDE AI ANSWER */
+
+.message-box p{
+    margin:0;
+    line-height:1.7;
+    color:#e2e8f0;
+    font-size:0.95rem;
+}
+
+/* HOVER EFFECTS */
+
+.faq-card:hover{
+    box-shadow:0 15px 40px rgba(6,182,212,0.2);
+    transform:translateY(-6px);
+}
+
+/* GLOW EFFECT INSIDE CHAT WINDOW */
+
+.chatbot-window::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(37,99,235,0.15);
+    filter:blur(80px);
+    top:-60px;
+    right:-60px;
+    border-radius:50%;
+    pointer-events:none;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:768px){
+
+    .chatbot-window{
+        height:80vh;
+        border-radius:16px;
+    }
+
+    .chat-header h3{
+        font-size:0.9rem;
+    }
+
+    .user-message .message-box{
+        max-width:85%;
+        font-size:0.9rem;
+    }
+
+    .ai-message .message-box{
+        max-width:85%;
+        font-size:0.9rem;
+    }
+
+    .ai-avatar{
+        width:36px;
+        height:36px;
+        font-size:18px;
+    }
+
+}
+
+/* BUTTON HOVER EFFECTS (CHAT CLOSE) */
+
+#closeChat:hover{
+    background:#dc2626;
+    transform:rotate(180deg) scale(1.1);
+}
+
+/* SMOOTH POPUP BORDER GLOW */
+
+.chatbot-window{
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5),
+        0 0 0 1px rgba(37,99,235,0.15);
+}
+
+/* FINAL AI TOUCH */
+
+.chatbot-popup.show .ai-avatar{
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(37,99,235,0.5);
+    }
+    70%{
+        box-shadow:0 0 0 15px rgba(37,99,235,0);
+    }
+    100%{
+        box-shadow:0 0 0 0 rgba(37,99,235,0);
+    }
+}
