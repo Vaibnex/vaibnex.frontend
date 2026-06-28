@@ -1,642 +1,338 @@
-/* =========================
-   VAIBNEX PREMIUM THEME
-========================= */
+/* ==========================================================================
+   1. EXTERNAL FONTS & GLOBAL VARIABLES
+   ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+/* Importing professional typography options from Google Fonts */
+@import url('https://googleapis.com');
 
-:root{
-    --primary:#2563eb;
-    --secondary:#06b6d4;
-    --bg:#0b1120;
-    --card:#111827;
-    --text:#f8fafc;
-    --muted:#94a3b8;
-    --border:rgba(255,255,255,0.08);
+/* Defining global CSS design tokens for consistent branding and themes */
+:root {
+    --primary: #2563eb;
+    /* Vibrant blue used for primary actions and accents */
+    --secondary: #06b6d4;
+    /* Cyan used for secondary highlights and gradients */
+    --bg: #0b1120;
+    /* Deep dark blue base color for the website background */
+    --card: #111827;
+    /* Slightly lighter gray-blue shade for structural cards */
+    --text: #f8fafc;
+    /* Off-white color for high contrast text readability */
+    --muted: #94a3b8;
+    /* Cool gray tone for subtitles, descriptions, and hints */
+    --border: rgba(255, 255, 255, 0.08);
+    /* Semi-transparent white ring for clean borders */
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+/* ==========================================================================
+   2. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+
+/* Universal reset to standardize margins, paddings, and sizing calculations across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* Enables elegant native smooth scrolling for anchor links */
 }
 
-body{
-    font-family:'Inter',sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    overflow-x:hidden;
+/* Base body configuration for core fonts, backgrounds, and layout boundaries */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    /* Safeguards against unexpected horizontal layout breaking or scrolling */
 }
 
-/* SCROLLBAR */
-
-::-webkit-scrollbar{
-    width:8px;
+/* Customizing scrollbar width for a modern, minimalist web footprint */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-::-webkit-scrollbar-thumb{
-    background:var(--primary);
-    border-radius:20px;
+/* Custom design for the draggable scrollbar slider track piece */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 20px;
 }
 
-/* HEADER */
+/* ==========================================================================
+   3. NAVIGATION HEADER
+   ========================================================================== */
 
-.header{
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-    backdrop-filter:blur(20px);
-    background:rgba(11,17,32,0.85);
-    border-bottom:1px solid var(--border);
+/* Main fixed navbar banner floating at the absolute top of the screen viewport */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* Keeps navbar sitting securely above all other content panels */
+    backdrop-filter: blur(20px);
+    /* Modern glassmorphism translucent blurry backdrop effect */
+    background: rgba(11, 17, 32, 0.85);
+    border-bottom: 1px solid var(--border);
 }
 
-.navbar{
-    max-width:1300px;
-    margin:auto;
-    padding:18px 30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/* Flexbox wrapper aligning the logo, navigation links, and action buttons */
+.navbar {
+    max-width: 1300px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    /* Spreads layout options across left, center, and right sides */
+    align-items: center;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+/* Container arranging the graphical image brand logo and identity text side-by-side */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.logo img{
-    width:45px;
+/* Constraining the physical scale dimensions of the branding logo asset */
+.logo img {
+    width: 45px;
 }
 
-.logo span{
-    font-size:1.4rem;
-    font-weight:700;
-    font-family:'Poppins',sans-serif;
+/* Stylizing the company textual branding typography details */
+.logo span {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
 }
 
-.nav-links{
-    display:flex;
-    list-style:none;
-    gap:28px;
+/* Flexbox grouping for the main navigation anchor directory layout elements */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
 }
 
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
+/* Core styling rules for individual text link nodes */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
 }
 
-.nav-links a:hover{
-    color:var(--secondary);
+/* Highlights the targeted navigation hyperlink text link with secondary cyan on cursor hover */
+.nav-links a:hover {
+    color: var(--secondary);
 }
 
-.apply-btn{
-    padding:12px 24px;
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary)
-    );
-    border-radius:50px;
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    transition:.3s;
+/* High-priority call-to-action application submission button */
+.apply-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: .3s;
 }
 
-.apply-btn:hover{
-    transform:translateY(-3px);
+/* Subtle upward floating hover response to communicate button interactive feedback clickability */
+.apply-btn:hover {
+    transform: translateY(-3px);
 }
 
-/* HERO */
+/* ==========================================================================
+   4. HERO SECTION
+   ========================================================================== */
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    max-width:1300px;
-    margin:auto;
-    padding:120px 40px;
-    gap:50px;
+/* Main top entry screen arrangement with balanced layout proportions and content spacing */
+.hero {
+    min-height: 100vh;
+    /* Demands full viewport height space coverage on landing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: auto;
+    padding: 120px 40px;
+    gap: 50px;
 }
 
-.hero-content{
-    flex:1;
+/* Left-side descriptive content block stretching to fill layout context ratios proportionately */
+.hero-content {
+    flex: 1;
 }
 
-.hero-content h1{
-    font-family:'Poppins',sans-serif;
-    font-size:4rem;
-    line-height:1.2;
+/* Grand master heading title styling with clean bold letter spacing proportions */
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    line-height: 1.2;
 }
 
-.hero-content h1 span{
-    background:linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary)
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+/* Applies a premium dual-color gradient clip effect on specific hero statement words */
+.hero-content h1 span {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-#typing-text{
-    margin-top:20px;
-    color:var(--secondary);
-    font-size:1.8rem;
+/* Target placeholder for the automated dynamic text typing engine animation script */
+#typing-text {
+    margin-top: 20px;
+    color: var(--secondary);
+    font-size: 1.8rem;
 }
 
-.hero-content p{
-    margin-top:20px;
-    color:var(--muted);
-    line-height:1.8;
-    max-width:600px;
+/* Sub-text paragraph description framing company statements below headings */
+.hero-content p {
+    margin-top: 20px;
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 600px;
 }
 
-.hero-buttons{
-    margin-top:35px;
-    display:flex;
-    gap:15px;
+/* Flex configuration organizing primary and secondary interaction action buttons together */
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
 }
 
-.btn-primary{
-    padding:14px 28px;
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary)
-    );
-    border-radius:50px;
-    color:white;
-    text-decoration:none;
-    font-weight:600;
+/* Solid background fill configuration styling for primary click target buttons */
+.btn-primary {
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    /* Validates correct width, padding and margin alignment blocks */
 }
 
-.btn-secondary{
-    padding:14px 28px;
-    border:1px solid var(--primary);
-    border-radius:50px;
-    color:white;
-    text-decoration:none;
+/* Outlined border style look tailored for secondary discovery buttons */
+.btn-secondary {
+    padding: 14px 28px;
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.hero-image img{
-    width:100%;
-    max-width:550px;
-    animation:float 5s ease-in-out infinite;
+/* Right-side artistic technology vector illustration layout constraints */
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    animation: float 5s ease-in-out infinite;
+    /* Links continuous vertical idle floating motion animation loop */
 }
 
-@keyframes float{
-    0%,100%{
-        transform:translateY(0);
+/* Keyframes rendering engine managing the looping floating motion vector coordinates */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
     }
-    50%{
-        transform:translateY(-20px);
+
+    50% {
+        transform: translateY(-20px);
     }
 }
 
-/* SECTION TITLE */
+/* ==========================================================================
+   5. REUSABLE COMPONENTS & TECH STACK
+   ========================================================================== */
 
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
+/* Standardized configuration styling applied to general sectional titles across components */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.section-title h2{
-    font-size:2.5rem;
-    font-family:'Poppins';
+/* Large sectional bold typography definition rules */
+.section-title h2 {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* TECH STACK */
-
-.tech-stack{
-    padding:100px 40px;
-    text-align:center;
-}
-
-.tech-grid{
-    max-width:1200px;
-    margin:50px auto 0;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-}
-
-.tech-card{
-    padding:25px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.04);
-    backdrop-filter:blur(15px);
-    border:1px solid var(--border);
-    transition:.3s;
-}
-
-.tech-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 30px rgba(37,99,235,.4);
-}
-
-/* ABOUT */
-
-.about{
-    padding:100px 40px;
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
-}
-
-.about p{
-    color:var(--muted);
-    font-size:1.1rem;
-    line-height:2;
-}
-
-/* SERVICES */
-
-.services{
-    padding:100px 40px;
-}
-
-.service-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.service-card{
-    padding:35px;
-    border-radius:24px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(15px);
-    border:1px solid var(--border);
-    transition:.4s;
-}
-
-.service-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 40px rgba(6,182,212,.3);
-}
-
-.service-card h3{
-    margin-bottom:15px;
-}
-
-
-
-/* INTERNSHIPS */
-
-.internships{
-    padding:100px 40px;
-}
-
-.internship-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.intern-card{
-    padding:40px;
-    text-align:center;
-    border-radius:20px;
-    background:var(--card);
-    border:1px solid var(--border);
-    transition:.3s;
-}
-
-.intern-card:hover{
-    transform:translateY(-8px);
-    border-color:var(--secondary);
-}
-
-/* STATS */
-
-.stats{
-    padding:100px 40px;
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-}
-
-.stat-box{
-    width:250px;
-    text-align:center;
-    padding:40px;
-    border-radius:20px;
-    background:var(--card);
-}
-
-.stat-box h2{
-    font-size:3rem;
-    color:var(--secondary);
-}
-
-/* PROJECTS */
-
-.projects{
-    padding:100px 40px;
-}
-
-.project-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.project-card{
-    padding:35px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.05);
-    border:1px solid var(--border);
-}
-
-/* VERIFY */
-
-.verify{
-    padding:100px 40px;
-    text-align:center;
-}
-
-.verify-form{
-    max-width:600px;
-    margin:auto;
-    display:flex;
-    gap:15px;
-}
-
-.verify-form input{
-    flex:1;
-    padding:16px;
-    border:none;
-    outline:none;
-    border-radius:12px;
-}
-
-.verify-form button{
-    padding:16px 25px;
-    border:none;
-    border-radius:12px;
-    cursor:pointer;
-    color:white;
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary)
-    );
-}
-
-/* CONTACT */
-
-.contact{
-    padding:100px 40px;
-}
-
-.contact-form{
-    max-width:700px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
+/* Container wrapper housing framework tools and library components */
+.tech-stack {
+    padding: 100px 40px;
+    text-align: center;
 }
 
-.contact-form input,
-.contact-form textarea{
-    padding:18px;
-    border:none;
-    outline:none;
-    border-radius:15px;
-    background:var(--card);
-    color:white;
+/* Auto-adapting layout engine adjusting items into grids automatically depending on browser size */
+.tech-grid {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
-.contact-form button{
-    padding:16px;
-    border:none;
-    border-radius:15px;
-    color:white;
-    font-size:1rem;
-    cursor:pointer;
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary)
-    );
+/* Individual framework badge tags sporting clean modern frosted glassmorphic designs */
+.tech-card {
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border);
+    transition: .3s;
 }
 
-/* FOOTER */
-
-footer{
-    padding:50px 20px;
-    text-align:center;
-    border-top:1px solid var(--border);
-}
-
-footer h2{
-    margin-bottom:15px;
-    font-family:'Poppins';
-}
-
-footer p{
-    color:var(--muted);
-    margin-top:10px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero-content h1{
-    font-size:2.8rem;
-}
-
-.nav-links{
-    display:none;
-}
-
-.verify-form{
-    flex-direction:column;
-}
-
-.hero-buttons{
-    justify-content:center;
-}
-}
-
-/* Testimonials */
-
-.testimonials{
-    padding:100px 40px;
-}
-
-.testimonial-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
-
-.testimonial-card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid var(--border);
-    backdrop-filter:blur(15px);
-    border-radius:20px;
-    padding:30px;
-    transition:.35s ease;
-}
-
-.testimonial-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 35px rgba(37,99,235,.25);
-}
-
-.testimonial-profile{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin-bottom:20px;
-}
-
-.testimonial-profile img{
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    border:3px solid var(--primary);
+/* Projects card slightly higher with an illuminating blue outer shadow reflection on hover */
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(37, 99, 235, .4);
 }
 
-.testimonial-profile h3{
-    font-size:1.1rem;
-    margin-bottom:5px;
-    font-family:'Poppins',sans-serif;
-}
-
-.testimonial-profile span{
-    color:var(--muted);
-    font-size:.9rem;
-}
-
-.testimonial-card p{
-    color:var(--muted);
-    line-height:1.8;
-}
-
-/* FAQ */
-
-.faq{
-    padding:100px 40px;
-}
-
-.faq-container{
-    max-width:900px;
-    margin:auto;
-}
-
-.faq-item{
-    background:rgba(255,255,255,.05);
-    border:1px solid var(--border);
-    border-radius:18px;
-    margin-bottom:18px;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.faq-item:hover{
-    border-color:var(--secondary);
-}
-
-.faq-question{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:22px 28px;
-    cursor:pointer;
-}
+/* ==========================================================================
+   6. ABOUT COMPANY SECTION
+   ========================================================================== */
 
-.faq-question h3{
-    font-size:1.05rem;
-    font-weight:600;
+/* Clean text container focusing purely on central summary narratives of company operations */
+.about {
+    padding: 100px 40px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
 }
 
-.faq-question span{
-    font-size:1.8rem;
-    color:var(--secondary);
-    transition:.3s;
+/* Spacing and line-height optimization to assist reading comfort on the long summary paragraph */
+.about p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 2;
 }
 
-.faq-answer{
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .4s ease;
-}
-
-.faq-answer p{
-    color:var(--muted);
-    line-height:1.8;
-    padding:0 28px 22px;
-}
-
-.faq-item.active .faq-answer{
-    max-height:300px;
-    padding-top:10px;
-}
-.faq-item.active .faq-question span{
-    transform:rotate(45deg);
-}
-
-/* Responsive */
-
-@media(max-width:900px){
+/* ==========================================================================
+   7. SERVICES SECTION
+   ========================================================================== */
 
-.testimonials,
-.faq{
-    padding:80px 25px;
+/* Outer wrapper panel block for organizational services sections */
+.services {
+    padding: 100px 40px;
 }
 
-.testimonial-grid{
-    grid-template-columns:1fr;
+/* Balanced layout structuring services features into rows and columns */
+.service-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-.faq-question{
-    padding:20px;
+/* Individual structural container designs highlighting professional core company skills panels */
+.service-card {
+    padding: 35px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border);
+    transition: .4s;
 }
 
-.faq-answer p{
-    padding:0 20px 20px;
-}
-
-}
-
-/* Hover Effects */
-
-.service-card,
-.intern-card,
-.project-card,
-.tech-card,
-.stat-box {
-    transition: all 0.35s ease;
-}
-
-.service-card:hover,
-.intern-card:hover,
-.project-card:hover,
-.tech-card:hover,
-.stat-box:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(37,99,235,0.25);
-}
+/* Lifts cards up and projects a neon cyan colored outer glow effect on cursor entry hover */
+.service-card:hover {
+    transform: translateY(-10px);
