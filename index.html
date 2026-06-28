@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Basic meta tags for character encoding and mobile responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaibnex | Innovating The Future</title>
-
-    <!-- Link to external custom CSS file -->
+    <!-- Fixed the dangling style tag from your source -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Pre-fetching and importing custom Google Fonts (Inter and Poppins) -->
-    <link href="https://googleapis.com" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- =========================================================================
-         NAVBAR & HEADER SECTION
-         Contains the website logo, primary links, and a call-to-action button.
-         ========================================================================= -->
+    <!-- Navbar -->
     <header class="header">
         <nav class="navbar">
-            <!-- Branding element: logo icon and brand name text -->
             <div class="logo">
                 <img src="logo (2).png" alt="Vaibnex Logo">
                 <span>VAIBNEX</span>
             </div>
-
-            <!-- Main navigation menu links mapped to section ID anchors -->
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -38,21 +26,14 @@
                 <li><a href="#verify">Verify</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-
-            <!-- Primary application anchor button -->
             <a href="#" class="apply-btn">Apply Now</a>
         </nav>
     </header>
 
-    <!-- =========================================================================
-         HERO SECTION
-         The prominent landing area containing core brand taglines and graphics.
-         ========================================================================= -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Left column: Text taglines, target container for dynamic typing text, and action buttons -->
         <div class="hero-content">
             <h1>Transforming Ideas Into <span>Digital Reality</span></h1>
-            <!-- Dynamic placeholder to handle typed content via JavaScript later -->
             <h2 id="typing-text"></h2>
             <p>Empowering future innovators through technology, real-world projects and professional internship opportunities.</p>
             <div class="hero-buttons">
@@ -60,20 +41,14 @@
                 <a href="#services" class="btn-secondary">Explore Services</a>
             </div>
         </div>
-
-        <!-- Right column: Floating illustrative graphic representing development/AI -->
         <div class="hero-image">
             <img src="images/hero.png" alt="Technology Illustration">
         </div>
     </section>
 
-    <!-- =========================================================================
-         TECH STACK SECTION
-         Showcases core technical competencies and software frameworks used.
-         ========================================================================= -->
+    <!-- Tech Stack -->
     <section class="tech-stack">
         <h2>Technologies We Work With</h2>
-        <!-- Flexible grid layout block distributing tech items cleanly -->
         <div class="tech-grid">
             <div class="tech-card">HTML5</div>
             <div class="tech-card">CSS3</div>
@@ -86,10 +61,7 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         ABOUT VAIBNEX SECTION
-         High-level company background statement and vision summary.
-         ========================================================================= -->
+    <!-- About -->
     <section id="about" class="about">
         <div class="section-title">
             <h2>About Vaibnex</h2>
@@ -97,10 +69,7 @@
         <p>Vaibnex is a technology-driven company dedicated to innovation, software development, artificial intelligence, and industry-focused internship programs that help students gain practical experience and professional growth.</p>
     </section>
 
-    <!-- =========================================================================
-         SERVICES SECTION
-         Grid structure breaking down core enterprise offerings and services.
-         ========================================================================= -->
+    <!-- Services -->
     <section id="services" class="services">
         <div class="section-title">
             <h2>Our Services</h2>
@@ -125,10 +94,7 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         INTERNSHIP PROGRAMS SECTION
-         Displays current domain specific training models provided to students.
-         ========================================================================= -->
+    <!-- Internship Section -->
     <section id="internships" class="internships">
         <div class="section-title">
             <h2>Internship Programs</h2>
@@ -141,12 +107,8 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         STATISTICS METRICS SECTION
-         Counters displaying training data and platform achievements.
-         ========================================================================= -->
+    <!-- Statistics -->
     <section class="stats">
-        <!-- data-target values are structured for analytical reading by JS engine counters -->
         <div class="stat-box">
             <h2 class="counter" data-target="500">0</h2>
             <p>Students Trained</p>
@@ -161,10 +123,7 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         FEATURED PROJECTS SECTION
-         Highlights internal tools and user applications built by team members.
-         ========================================================================= -->
+    <!-- Projects -->
     <section id="projects" class="projects">
         <div class="section-title">
             <h2>Featured Projects</h2>
@@ -185,19 +144,15 @@
         </div>
     </section>
 
-    <!-- =========================================================================
-         TESTIMONIALS SECTION
-         Slider-ready block highlighting intern feedback using dynamic profile avatars.
-         ========================================================================= -->
+    <!-- Testimonials -->
     <section class="testimonials">
         <div class="section-title">
             <h2>What Our Interns Say</h2>
         </div>
         <div class="testimonial-grid">
-            <!-- Testimonial Item 1 -->
             <div class="testimonial-card">
                 <div class="testimonial-profile">
-                    <img src="https://ui-avatars.com" alt="Honey">
+                    <img src="https://ui-avatars.com/api/?name=Honey+Alwani&background=2563eb&color=fff" alt="Honey">
                     <div>
                         <h3>Honey Alwani</h3>
                         <span>Frontend Developer Intern</span>
@@ -205,13 +160,233 @@
                 </div>
                 <p>Working at Vaibnex has been an incredible learning experience. Real-world projects, supportive mentors, and modern technologies helped me improve my frontend development skills.</p>
             </div>
-
-            <!-- Testimonial Item 2 -->
             <div class="testimonial-card">
                 <div class="testimonial-profile">
-                    <img src="https://ui-avatars.com" alt="Ali">
+                    <img src="https://ui-avatars.com/api/?name=Ali+Khan&background=06b6d4&color=fff" alt="Ali">
                     <div>
                         <h3>Ali Khan</h3>
                         <span>UI/UX Design Intern</span>
                     </div>
                 </div>
+                <p>Vaibnex provides a professional environment where interns work on practical projects and gain valuable industry experience.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-profile">
+                    <img src="https://ui-avatars.com/api/?name=Sara+Ahmed&background=1d4ed8&color=fff" alt="Sara">
+                    <div>
+                        <h3>Sara Ahmed</h3>
+                        <span>Web Development Intern</span>
+                    </div>
+                </div>
+                <p>The internship improved my technical knowledge and teamwork skills. It was a wonderful opportunity to learn and grow.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+   <!-- ==========================================================================
+   INTERACTIVE VINTAGE LETTER FAQ SECTION
+   ========================================================================== -->
+    <!-- ==========================================================================
+       VINTAGE LETTER FAQ SECTION
+       ========================================================================== -->
+    <!-- ==========================================================
+     VAIBNEX AI FAQ CHATBOT
+=========================================================== -->
+
+<section class="faq" id="faq">
+
+    <div class="section-title">
+        <h2>Ask Vaibnex AI</h2>
+        <p>Click any question and our AI Assistant will answer instantly.</p>
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-card"
+            data-question="Who can apply for Vaibnex internships?"
+            data-answer="Students, freshers and graduates from any stream can apply for Vaibnex internships. Whether you are a beginner or already have technical knowledge, our programs are designed to help you gain real industry experience through practical projects.">
+
+            <div>
+                <h3>Who can apply for Vaibnex internships?</h3>
+                <small>AI will answer this question</small>
+            </div>
+
+            <span>➜</span>
+
+        </div>
+
+        <div class="faq-card"
+            data-question="Are internships completely remote?"
+            data-answer="Yes. All Vaibnex internships are fully remote. You can complete tasks, attend mentor sessions, and submit projects online from anywhere in the world using your laptop and internet connection.">
+
+            <div>
+                <h3>Are internships completely remote?</h3>
+                <small>AI will answer this question</small>
+            </div>
+
+            <span>➜</span>
+
+        </div>
+
+        <div class="faq-card"
+            data-question="Will I receive a certificate?"
+            data-answer="Yes. After successfully completing your internship and all assigned tasks, you will receive an Internship Completion Certificate which can strengthen your resume and portfolio.">
+
+            <div>
+                <h3>Will I receive a certificate?</h3>
+                <small>AI will answer this question</small>
+            </div>
+
+            <span>➜</span>
+
+        </div>
+
+        <div class="faq-card"
+            data-question="Will I work on real projects?"
+            data-answer="Absolutely. Every intern works on industry-inspired practical projects under mentor guidance. These projects help build your portfolio and improve your real-world development skills.">
+
+            <div>
+                <h3>Will I work on real projects?</h3>
+                <small>AI will answer this question</small>
+            </div>
+
+            <span>➜</span>
+
+        </div>
+
+        <div class="faq-card"
+            data-question="How do I apply?"
+            data-answer="Click on the Apply Now button available on the website, complete the application form, and our recruitment team will review your submission. If selected, you will receive further instructions through email.">
+
+            <div>
+                <h3>How do I apply?</h3>
+                <small>AI will answer this question</small>
+            </div>
+
+            <span>➜</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     AI CHATBOT POPUP
+=========================================================== -->
+
+<div class="chatbot-popup" id="chatbotPopup">
+
+    <div class="chatbot-window">
+
+        <!-- Header -->
+
+        <div class="chat-header">
+
+            <div class="chat-profile">
+
+                <div class="ai-avatar">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h3>Vaibnex AI Assistant</h3>
+
+                    <span class="status">
+                        ● Online
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button id="closeChat">
+                ✕
+            </button>
+
+        </div>
+
+        <!-- Chat Body -->
+
+        <div class="chat-body">
+
+            <!-- User -->
+
+            <div class="message user-message">
+
+                <div class="message-box" id="userQuestion">
+
+                </div>
+
+            </div>
+
+            <!-- AI -->
+
+            <div class="message ai-message">
+
+                <div class="ai-icon">
+                    🤖
+                </div>
+
+                <div class="message-box">
+
+                    <div class="thinking" id="thinking">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <p id="aiAnswer"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- Verify Section -->
+    <section id="verify" class="verify">
+        <div class="section-title">
+            <h2>Certificate Verification</h2>
+        </div>
+        <div class="verify-container">
+            <p>Enter your certificate ID to verify authenticity.</p>
+            <form class="verify-form">
+                <input type="text" placeholder="Enter Certificate ID" required>
+                <button type="submit" class="btn-primary">Verify</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Vaibnex. All Rights Reserved.</p>
+    </footer>
+
+    <!-- HERE IS THE MAGIC: Linking the JavaScript file before body closes -->
+    <script src="script.js"></script>
+</body>
+</html>
