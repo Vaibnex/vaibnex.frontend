@@ -375,3 +375,118 @@ const revealExtra = () => {
 window.addEventListener("scroll", revealExtra);
 
 revealExtra();
+/**
+ * Vaibnex Vintage Letter FAQ Interaction Module
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Select all our envelope style headers
+    const envelopeHeaders = document.querySelectorAll('.faq-envelope-header');
+
+    envelopeHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const currentEnvelope = header.parentElement;
+            
+            // Check if this specific letter item is already open
+            const isOpen = currentEnvelope.classList.contains('open-letter');
+
+            // Optional: Close all other open envelopes first (Accordion mode)
+            document.querySelectorAll('.faq-envelope-item').forEach(item => {
+                item.classList.remove('open-letter');
+            });
+
+            // If it wasn't open, open it now
+            if (!isOpen) {
+                currentEnvelope.classList.add('open-letter');
+            }
+        });
+    });
+    
+});
+
+/* ==========================================================
+   VAIBNEX AI CHATBOT - FINAL WORKING JS
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cards = document.querySelectorAll(".faq-card");
+
+    const popup = document.getElementById("chatbotPopup");
+    const closeBtn = document.getElementById("closeChat");
+
+    const userBox = document.getElementById("userQuestion");
+    const aiAnswer = document.getElementById("aiAnswer");
+    const thinking = document.getElementById("thinking");
+
+    let typingInterval;
+
+    // TYPE EFFECT (AI ANSWER)
+    function typeText(text) {
+
+        clearInterval(typingInterval);
+
+        aiAnswer.textContent = "";
+        thinking.style.display = "flex";
+
+        let i = 0;
+
+        typingInterval = setInterval(() => {
+
+            thinking.style.display = "none";
+
+            aiAnswer.textContent += text.charAt(i);
+
+            i++;
+
+            if (i >= text.length) {
+                clearInterval(typingInterval);
+            }
+
+        }, 18);
+    }
+
+    // OPEN CHATBOT
+    cards.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            const question = card.dataset.question;
+            const answer = card.dataset.answer;
+
+            popup.classList.add("show");
+
+            userBox.textContent = question;
+
+            // AI delay feel (real chatbot vibe)
+            aiAnswer.textContent = "";
+            thinking.style.display = "flex";
+
+            setTimeout(() => {
+                typeText(answer);
+            }, 900);
+
+        });
+
+    });
+
+    // CLOSE BUTTON
+    closeBtn.addEventListener("click", () => {
+        popup.classList.remove("show");
+    });
+
+    // OUTSIDE CLICK CLOSE
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.classList.remove("show");
+        }
+    });
+
+    // ESC KEY CLOSE
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            popup.classList.remove("show");
+        }
+    });
+
+});
