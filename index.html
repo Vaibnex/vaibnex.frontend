@@ -184,31 +184,173 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
-        <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-        </div>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Who can apply for Vaibnex internships?</h3>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Any student or fresh graduate looking to build real-world tech experience can apply.</p>
-                </div>
+   <!-- ==========================================================================
+   INTERACTIVE VINTAGE LETTER FAQ SECTION
+   ========================================================================== -->
+    <!-- ==========================================================================
+       VINTAGE LETTER FAQ SECTION
+       ========================================================================== -->
+    <!-- ==========================================================
+     VAIBNEX AI FAQ CHATBOT
+=========================================================== -->
+
+<section class="faq" id="faq">
+
+    <div class="section-title">
+        <h2>Ask Vaibnex AI</h2>
+        <p>Click any question and our AI Assistant will answer instantly.</p>
+    </div>
+
+    <div class="faq-container">
+
+        <div class="faq-card"
+            data-question="Who can apply for Vaibnex internships?"
+            data-answer="Students, freshers and graduates from any stream can apply for Vaibnex internships. Whether you are a beginner or already have technical knowledge, our programs are designed to help you gain real industry experience through practical projects.">
+
+            <div>
+                <h3>Who can apply for Vaibnex internships?</h3>
+                <small>AI will answer this question</small>
             </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Are these internships remote?</h3>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, we offer flexible remote internship options tailored for students.</p>
-                </div>
-            </div>
+
+            <span>➜</span>
+
         </div>
-    </section>
+
+        <div class="faq-card"
+            data-question="Are internships completely remote?"
+            data-answer="Yes. All Vaibnex internships are fully remote. You can complete tasks, attend mentor sessions, and submit projects online from anywhere in the world using your laptop and internet connection.">
+
+            <div>
+                <h3>Are internships completely remote?</h3>
+                <small>AI will answer this question</small>
+            </div>
+
+            <span>➜</span>
+
+        </div>
+
+        <div class="faq-card"
+            data-question="Will I receive a certificate?"
+            data-answer="Yes. After successfully completing your internship and all assigned tasks, you will receive an Internship Completion Certificate which can strengthen your resume and portfolio.">
+
+            <div>
+                <h3>Will I receive a certificate?</h3>
+                <small>AI will answer this question</small>
+            </div>
+
+            <span>➜</span>
+
+        </div>
+
+        <div class="faq-card"
+            data-question="Will I work on real projects?"
+            data-answer="Absolutely. Every intern works on industry-inspired practical projects under mentor guidance. These projects help build your portfolio and improve your real-world development skills.">
+
+            <div>
+                <h3>Will I work on real projects?</h3>
+                <small>AI will answer this question</small>
+            </div>
+
+            <span>➜</span>
+
+        </div>
+
+        <div class="faq-card"
+            data-question="How do I apply?"
+            data-answer="Click on the Apply Now button available on the website, complete the application form, and our recruitment team will review your submission. If selected, you will receive further instructions through email.">
+
+            <div>
+                <h3>How do I apply?</h3>
+                <small>AI will answer this question</small>
+            </div>
+
+            <span>➜</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     AI CHATBOT POPUP
+=========================================================== -->
+
+<div class="chatbot-popup" id="chatbotPopup">
+
+    <div class="chatbot-window">
+
+        <!-- Header -->
+
+        <div class="chat-header">
+
+            <div class="chat-profile">
+
+                <div class="ai-avatar">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h3>Vaibnex AI Assistant</h3>
+
+                    <span class="status">
+                        ● Online
+                    </span>
+
+                </div>
+
+            </div>
+
+            <button id="closeChat">
+                ✕
+            </button>
+
+        </div>
+
+        <!-- Chat Body -->
+
+        <div class="chat-body">
+
+            <!-- User -->
+
+            <div class="message user-message">
+
+                <div class="message-box" id="userQuestion">
+
+                </div>
+
+            </div>
+
+            <!-- AI -->
+
+            <div class="message ai-message">
+
+                <div class="ai-icon">
+                    🤖
+                </div>
+
+                <div class="message-box">
+
+                    <div class="thinking" id="thinking">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <p id="aiAnswer"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
     <!-- Verify Section -->
     <section id="verify" class="verify">
@@ -244,5 +386,7 @@
         <p>&copy; 2026 Vaibnex. All Rights Reserved.</p>
     </footer>
 
+    <!-- HERE IS THE MAGIC: Linking the JavaScript file before body closes -->
+    <script src="script.js"></script>
 </body>
 </html>
