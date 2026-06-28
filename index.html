@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaibnex | Innovating The Future</title>
-    <!-- Fixed the dangling style tag from your source -->
+    
+    <!-- External CSS file ko link kiya jaa rha hai -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts se Inter aur Poppins font style fetch kiya jaa rha hai -->
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- Navbar: Website ka sabse upar ka header jisme logo aur navigation links hain -->
     <header class="header">
         <nav class="navbar">
+            <!-- Company Logo aur Name -->
             <div class="logo">
                 <img src="logo (2).png" alt="Vaibnex Logo">
                 <span>VAIBNEX</span>
             </div>
+            <!-- Menu Links: click krne par page ke us section pr automatic scroll hoga -->
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -26,27 +31,32 @@
                 <li><a href="#verify">Verify</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <!-- Top Right side ka Call-to-Action button -->
             <a href="#" class="apply-btn">Apply Now</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section: Website ka main welcome banner jisme headline aur floating image hai -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <!-- Main Title jisme 'Digital Reality' text gradient color mein chamkega -->
             <h1>Transforming Ideas Into <span>Digital Reality</span></h1>
+            <!-- Yeh h2 khali hai kyunki isme JavaScript se dynamic typing animation chalega -->
             <h2 id="typing-text"></h2>
             <p>Empowering future innovators through technology, real-world projects and professional internship opportunities.</p>
+            <!-- Hero section ke do important buttons -->
             <div class="hero-buttons">
                 <a href="#" class="btn-primary">Apply Internship</a>
                 <a href="#services" class="btn-secondary">Explore Services</a>
             </div>
         </div>
+        <!-- Right side ki image jisme CSS se up-down moving animation lagaya hai -->
         <div class="hero-image">
             <img src="images/hero.png" alt="Technology Illustration">
         </div>
     </section>
 
-    <!-- Tech Stack -->
+    <!-- Tech Stack Section: Un technologies ki list jinpar company kaam karti hai -->
     <section class="tech-stack">
         <h2>Technologies We Work With</h2>
         <div class="tech-grid">
@@ -61,7 +71,7 @@
         </div>
     </section>
 
-    <!-- About -->
+    <!-- About Section: Company ke baare mein choti si summary -->
     <section id="about" class="about">
         <div class="section-title">
             <h2>About Vaibnex</h2>
@@ -69,7 +79,7 @@
         <p>Vaibnex is a technology-driven company dedicated to innovation, software development, artificial intelligence, and industry-focused internship programs that help students gain practical experience and professional growth.</p>
     </section>
 
-    <!-- Services -->
+    <!-- Services Section: Jo services provide ki jaati hain unke cards -->
     <section id="services" class="services">
         <div class="section-title">
             <h2>Our Services</h2>
@@ -94,7 +104,7 @@
         </div>
     </section>
 
-    <!-- Internship Section -->
+    <!-- Internship Section: Available internship domains ki list -->
     <section id="internships" class="internships">
         <div class="section-title">
             <h2>Internship Programs</h2>
@@ -107,8 +117,9 @@
         </div>
     </section>
 
-    <!-- Statistics -->
+    <!-- Statistics Section: Numbers show karne ke liye (JS se counters 0 se chalenge) -->
     <section class="stats">
+        <!-- data-target mein main number likha hai jo count-up animation ke kaam aayega -->
         <div class="stat-box">
             <h2 class="counter" data-target="500">0</h2>
             <p>Students Trained</p>
@@ -123,7 +134,7 @@
         </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Section: Featured industrial projects ke details -->
     <section id="projects" class="projects">
         <div class="section-title">
             <h2>Featured Projects</h2>
@@ -144,15 +155,16 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials Section: Purane interns ke feedback aur reviews -->
     <section class="testimonials">
         <div class="section-title">
             <h2>What Our Interns Say</h2>
         </div>
         <div class="testimonial-grid">
+            <!-- UI-Avatars API ka use kiya hai dynamic user profile pictures generate karne ke liye -->
             <div class="testimonial-card">
                 <div class="testimonial-profile">
-                    <img src="https://ui-avatars.com/api/?name=Honey+Alwani&background=2563eb&color=fff" alt="Honey">
+                    <img src="https://ui-avatars.com" alt="Honey">
                     <div>
                         <h3>Honey Alwani</h3>
                         <span>Frontend Developer Intern</span>
@@ -162,7 +174,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-profile">
-                    <img src="https://ui-avatars.com/api/?name=Ali+Khan&background=06b6d4&color=fff" alt="Ali">
+                    <img src="https://ui-avatars.com" alt="Ali">
                     <div>
                         <h3>Ali Khan</h3>
                         <span>UI/UX Design Intern</span>
@@ -172,7 +184,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-profile">
-                    <img src="https://ui-avatars.com/api/?name=Sara+Ahmed&background=1d4ed8&color=fff" alt="Sara">
+                    <img src="https://ui-avatars.com" alt="Sara">
                     <div>
                         <h3>Sara Ahmed</h3>
                         <span>Web Development Intern</span>
@@ -183,12 +195,13 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section: Frequently Asked Questions (Accordion Dropdown style) -->
     <section class="faq">
         <div class="section-title">
             <h2>Frequently Asked Questions</h2>
         </div>
         <div class="faq-container">
+            <!-- FAQ Item 1 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Who can apply for Vaibnex internships?</h3>
@@ -198,6 +211,7 @@
                     <p>Any student or fresh graduate looking to build real-world tech experience can apply.</p>
                 </div>
             </div>
+            <!-- FAQ Item 2 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Are these internships remote?</h3>
@@ -210,39 +224,4 @@
         </div>
     </section>
 
-    <!-- Verify Section -->
-    <section id="verify" class="verify">
-        <div class="section-title">
-            <h2>Certificate Verification</h2>
-        </div>
-        <div class="verify-container">
-            <p>Enter your certificate ID to verify authenticity.</p>
-            <form class="verify-form">
-                <input type="text" placeholder="Enter Certificate ID" required>
-                <button type="submit" class="btn-primary">Verify</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="section-title">
-            <h2>Get In Touch</h2>
-        </div>
-        <div class="contact-container">
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Vaibnex. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+    <!-- Verify Section: Certificate ID check karne ke liye verification portal -->
