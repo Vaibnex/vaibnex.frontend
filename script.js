@@ -8,7 +8,6 @@ const texts = [
   "Web Development",
   "AI Solutions",/* =========================
    VAIBNEX PREMIUM SCRIPT
-========================= */
 
 /* TYPING EFFECT */
 
@@ -414,7 +413,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ==========================================================
    VAIBNEX AI CHATBOT - FINAL WORKING JS
-========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -897,7 +895,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ==========================================================
    VAIBNEX AI CHATBOT - FINAL WORKING JS
-========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
