@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ /* ===== NAVBAR FIX ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    background-color:white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* THIS IS THE KEY FIX — logo image was 300x300 */
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #1e3a8a;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #334155;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.apply-btn {
+    background: #2563eb;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.apply-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Fix body top padding so content doesn't hide behind fixed navbar */
+body {
+    padding-top: 70px;
+    background-color:wheat;
+}
+.hero {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-content {
+    text-align:center;
+    padding: 0%;
+    margin-top: auto;
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+.hero-image {
+    justify-content: center;
+}
+.tech-stack{
+    text-align:center;
+    margin-left: 0%;
+    padding-left: 0%;
+
+}
+.section-title{
+    text-align: center;
+}
+.stat-box{
+    text-align: center;
+}
+.verify-container{
+    text-align: center;
+    text-size-adjust: initial;
+}
+.contact-container{
+    text-align: center;
+}
+.footer{
+    text-align: center;
+}
